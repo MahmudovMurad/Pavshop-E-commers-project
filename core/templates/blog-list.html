@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} Pavshop {% endblock title %}
+
+ 
+{% block content %}
+
+  <!--======= SUB BANNER =========-->
+  <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>PAVSHOP blog list</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li class="active">BLOG</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Blog List -->
+    <section class="blog-list blog-list-3 padding-top-100 padding-bottom-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9"> 
+            
+            <!-- Article -->
+            
+            <article>
+              {% for blog in blogs %}
+              <div class="row">
+                <div class="col-sm-5"> 
+                  <!-- Post Img --> 
+                  <img class="img-responsive" src="{{ blog.img.url }}" alt="" > </div>
+                <div class="col-sm-7">  
+                  <!-- Tittle -->
+                  <div class="post-tittle left"> <a href="#." class="tittle">{{ blog.title }}</a> 
+                    <!-- Post Info --> 
+                    <span><i class="primary-color icon-user"></i>  {{blog.name}}</span> <span><i class="primary-color icon-calendar"></i> April 27, 2016</span> <span><i class="primary-color icon-bubble"></i> 05</span> 
+                    {% for tag in blog.tags.all %}
+                    <span><i class="primary-color icon-tag"></i>{{ tag.tag }}</span> </div>
+                    {% endfor %}
+                  <!-- Post Content -->
+                  <div class="text-left"> 
+                    <p>{{ blog.description }}</p>
+                    <a href="#" class="red-more">READ MORE</a> </div>
+                </div>
+              </div>
+              {% endfor %}
+            </article>
+            
+            
+            
+            <!-- Pagination -->
+            <!-- <ul class="pagination in-center">
+              <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+              <li class="active"><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+            </ul> -->
+          </div>
+          
+          <!-- Sider Bar -->
+          <div class="col-md-3"> 
+            
+            <!-- SEARCH -->
+            
+            <div class="shop-sidebar"> 
+              
+              <!-- Category -->
+              <h5 class="shop-tittle margin-bottom-30">category</h5>
+              <ul class="shop-cate">
+                {% for i in categories %}
+                <li><a href="#." class="category-field" data = "{{i.id}}"> {{i.category}}</a></li>
+                {% endfor %}
+                
+              </ul>
+              
+              <!-- Recent Post -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">recent post</h5>
+              {% for i in blogs %}
+              <ul class="papu-post margin-top-20">
+                <li class="media">
+                  <div class="media-left"> <a href="#"> <img class="media-object" src="{{ i.img.url }}" alt=""></a> </div>
+                  <div class="media-body"> <a class="media-heading" href="#.">{{blog.title}}</a> <span>Posted on April 27, 2016</span> </div>
+                </li>
+              </ul>
+              {% endfor %}
+              <!-- TAGS -->
+              <h5 class="shop-tittle margin-top-60 margin-bottom-30">PAUPLAR TAGS</h5>
+              <ul class="shop-tags">
+                {% for i in tags %}
+                <li><a href="#.">{{i.tag}}</a></li>
+                {% endfor %}
+              </ul>
+              
+              <!-- BRAND -->
+              
+              
+              <!-- SIDE BACR BANER -->
+              <div class="side-bnr margin-top-50"> <img class="img-responsive" src="{% static 'images/ps5.jpeg' %}" alt="">
+                <div class="position-center-center"> <span class="price"><small>$</small>2999</span>
+                  <div class="bnr-text">look
+                    hot
+                    with
+                    style</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Culture BLOCK -->
+    <section class="cultur-block">
+      
+      
+      <!-- Culture Text -->
+      <div class="position-center-center">
+        <div class="container">
+          <div class="col-sm-6 center-block">
+            <h4>FOLLOW US @ INSTAGRAM</h4>
+            <p>Phasellus lacinia fermentutm bibendum. Interdum et malante ipuctus non. Nulla lacinia,
+              eros vel fermentum consectetur, ris dolor in ex. </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- News Letter -->
+   
+  </div>
+  
+  
+</div>
+{% endblock content %}
+</body>
+</html>

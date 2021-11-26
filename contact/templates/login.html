@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} Pavshop {% endblock title %}
+
+ 
+{% block content %}
+  
+
+<section class="sub-bnr" data-stellar-background-ratio="0.5">
+  <div class="position-center-center">
+    <div class="container">
+      <h4>LOGIN</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+        Sed feugiat, tellus vel tristique posuere, diam</p>
+      <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">PAGES</a></li>
+        <li class="active">LOGIN</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!--======= PAGES INNER =========-->
+    <section class="chart-page padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- Payments Steps -->
+        <div class="shopping-cart"> 
+          
+          <!-- SHOPPING INFORMATION -->
+          <div class="cart-ship-info">
+            <div class="row"> 
+              
+              <!-- ESTIMATE SHIPPING & TAX -->
+              <div class="col-sm-7">
+                <h6>LOGIN YOUR ACCOUNT</h6>
+                <form method="POST" id="login_form">
+                  {% csrf_token %}
+                  <ul class="row">
+                    
+                    <!-- Name -->
+                    <li class="col-md-12">
+                      <label>Email</label>
+                      <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                    </li>
+                    <!-- LAST NAME -->
+                    <li class="col-md-12">
+                      <label>Password</label>
+                      <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                    <!-- LOGIN -->
+                    <li class="col-md-4">
+                      <button type="" id="sbmt" class="btn">LOGIN</button>
+                    </li>
+                    
+                    <!-- CREATE AN ACCOUNT -->
+                    <li class="col-md-4">
+                      <div class="checkbox margin-0 margin-top-20">
+                        <input id="checkbox1" class="styled" type="checkbox">
+                        <label for="checkbox1"> Stay me Login</label>
+                      </div>
+                    </li>
+                    
+                    <!-- FORGET PASS -->
+                    <li class="col-md-4">
+                      <div class="checkbox margin-0 margin-top-20 text-right">
+                        <a href="{% url 'contact:forget-password' %}">Forget Password</a>
+                      </div>
+                    </li>
+                  </ul>
+                </form>
+                
+              </div>
+              
+              <!-- SUB TOTAL -->
+              <div class="col-sm-5">
+                
+                
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- News Letter -->
+    
+  </div>
+  
+
+  
+</div>
+{% endblock content %}

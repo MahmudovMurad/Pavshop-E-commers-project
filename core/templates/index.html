@@ -1,0 +1,298 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} Pavshop {% endblock title %}
+
+ 
+{% block content %}
+  <!--======= HOME MAIN SLIDER =========-->
+  <section class="home-slider"> 
+  
+    <!-- SLIDE Start -->
+    <div class="tp-banner-container">
+      <div class="tp-banner">
+        <ul>
+          <!-- SLIDE  -->
+          <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
+            <!-- MAIN IMAGE --> 
+            <img src="{% static 'images/slider1.jpg' %}"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <!-- LAYERS --> 
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption font-playfair sfb tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="-200" 
+                data-speed="800" 
+                data-start="500" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 7; font-size:18px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">The Latest Product from PAVSHOP</div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfl font-extra-bold tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="-120" 
+                data-speed="800" 
+                data-start="800" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:80px; color:#fff; text-transform:uppercase; white-space: nowrap;"><small class="font-regular">$</small>299 </div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-extra-bold tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="0" 
+                data-speed="800" 
+                data-start="800" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:120px; color:#fff; text-transform:uppercase; white-space: nowrap;">featured </div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-extra-bold tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="110" 
+                data-speed="800" 
+                data-start="1300" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:120px; color:#fff; text-transform:uppercase; white-space: nowrap;">cycle </div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption lfb tp-resizeme" 
+                data-x="left" data-hoffset="0" 
+                data-y="center" data-voffset="240" 
+                data-speed="800" 
+                data-start="2200" 
+                data-easing="Power3.easeInOut" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-scrolloffset="0"
+                style="z-index: 8;"><a href="#." class="btn">SHOP NOW</a> </div>
+          </li>
+          
+          <!-- SLIDE  -->
+          <li data-transition="random" data-slotamount="7" data-masterspeed="300"  data-saveperformance="off" > 
+            <!-- MAIN IMAGE --> 
+            <img src="{% static 'images/slider2.jpg' %}"  alt="slider"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"> 
+            <!-- LAYERS --> 
+            <!-- LAYER NR. 1 -->
+            <div class="tp-caption font-playfair sfb tp-resizeme" 
+                data-x="center" data-hoffset="0" 
+                data-y="center" data-voffset="-150" 
+                data-speed="800" 
+                data-start="500" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 7; font-size:18px; color:#fff; max-width: auto; max-height: auto; white-space: nowrap;">The Latest Product from PAVSHOP</div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-regular tp-resizeme letter-space-4" 
+                data-x="center" data-hoffset="0" 
+                data-y="center" data-voffset="-50" 
+                data-speed="800" 
+                data-start="800" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:78px; color:#fff; text-transform:uppercase; white-space: nowrap;">look beautiful </div>
+            <!-- LAYER NR. 2 -->
+            <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4" 
+                data-x="center" data-hoffset="0" 
+                data-y="center" data-voffset="60" 
+                data-speed="800" 
+                data-start="1300" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="chars" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:140px; color:#fff; text-transform:uppercase; white-space: nowrap;">this season </div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption sfb font-extra-bold tp-resizeme" 
+                data-x="center" data-hoffset="120"
+                data-y="center" data-voffset="200"
+                data-speed="800" 
+                data-start="2200" 
+                data-easing="Power3.easeInOut" 
+                data-splitin="none" 
+                data-splitout="none" 
+                data-elementdelay="0.07" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                style="z-index: 6; font-size:60px; color:#fff; text-transform:uppercase; white-space: nowrap;"><small class="font-regular">$</small> 299 </div>
+            <!-- LAYER NR. 4 -->
+            <div class="tp-caption lfb tp-scrollbelowslider tp-resizeme" 
+                data-x="center" data-hoffset="-120" 
+                data-y="center" data-voffset="200" 
+                data-speed="800" 
+                data-start="2200" 
+                data-easing="Power3.easeInOut" 
+                data-elementdelay="0.1" 
+                data-endelementdelay="0.1" 
+                data-endspeed="300" 
+                data-scrolloffset="0"
+                style="z-index: 8;"><a href="#." class="btn">BUY NOW</a> </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- New Arrival -->
+    <section class="padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>Products preview</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+      </div>
+      
+      <!-- New Arrival -->
+      <div class="arrival-block single-img-demos"> 
+        
+        
+          
+        
+        <!-- Item -->
+        {% for product in products %}
+        <div class="item"> 
+          <!-- Images --> 
+          <img class="img-1" src="{{ product.cover_image.url }}" alt=""> 
+          <!-- Overlay  -->
+          <div class="overlay"> 
+            <!-- Price --> 
+            <span class="price"><small>$</small>{{ product.price }}</span>
+            <div class="position-center-center"> <a href="{{ product.cover_image.url }}" data-lighter><i class="icon-magnifier"></i></a> </div>
+          </div>
+          <!-- Item Name -->
+          <div class="item-name"> <a href="#." style="color:#ffdd00;">{{ product.name }}</a>
+          </div>
+        </div>
+        {% endfor %}
+        
+      
+      </div>
+    </section>
+    
+    <!-- Popular Products -->
+    <section class="padding-top-50 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>popular products</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+        
+        <!-- Popular Item Slide -->
+        <div class="papular-block block-slide single-img-demos"> 
+          
+          <!-- Item -->
+          {%for product in products%}
+          <div class="item"> 
+            <!-- Item img -->
+            <div class="item-img"> <img class="img-1" src="{{ product.cover_image.url }}" alt="" > 
+              <!-- Overlay -->
+              <div class="overlay">
+                <div class="position-center-center">
+                  <div class="inn"><a href="{{ product.cover_image.url }}" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#." ><i class="icon-heart"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <!-- Item Name -->
+            <div class="item-name"> <a href="#.">{{ product.name }}</a>
+              <p>{{ product.description }}</p>
+            </div>
+            <!-- Price --> 
+            <span class="price"><small>$</small>{{ product.price }}</span> 
+          </div>
+       
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    
+    <!-- Knowledge Share -->
+    <section class="light-gray-bg padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>knowledge share</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+        <div class="knowledge-share">
+          <ul class="row">
+            
+            <!-- Post 1 -->
+            <li class="col-md-6">
+              <div class="date"> <span>September</span> <span class="huge">20</span> </div>
+              <a href="#.">start date</a>
+
+              <span>By <strong>Murad</strong></span> </li>
+            
+            <!-- Post 2 -->
+            <li class="col-md-6">
+              <div class="date"> <span>November</span> <span class="huge">22</span> </div>
+              <a href="#.">end date</a>
+              <span>By <strong>Murad</strong></span> </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Testimonial -->
+   
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Pavshop is a website project about games</p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+   
+  </div>
+  
+  
+</div>
+{% endblock content %}
+</body>
+</html>

@@ -1,0 +1,311 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title%} Pavshop {% endblock title %}
+
+ 
+{% block content %}
+   <!--======= SUB BANNER =========-->
+   <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <div class="position-center-center">
+      <div class="container">
+        <h4>{{product.name}}</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</p>
+        <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li class="active">Data</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- Content -->
+  <div id="content"> 
+    
+    <!-- Popular Products -->
+    <section class="padding-top-100 padding-bottom-100">
+      <div class="container"> 
+        
+        <!-- SHOP DETAIL -->
+        <div class="shop-detail">
+          <div class="row"> 
+            
+            <!-- Popular Images Slider -->
+          <form method="post">
+            {% for i in products  %}
+
+            <div class="col-md-7"> 
+              
+              <!-- Images Slider -->
+              <div class="images-slider">
+                <ul class="slides">
+                  <li data-thumb="{{i.cover_image.url}}"> <img class="img-responsive" src="{{i.cover_image.url}}"  alt=""> </li>
+                  <li data-thumb="{{i.cover_image.url}}"> <img class="img-responsive" src="{{i.cover_image.url}}"  alt=""> </li>
+                  <li data-thumb="{{i.cover_image.url}}"> <img class="img-responsive" src="{{i.cover_image.url}}"  alt=""> </li>
+                </ul>
+              </div>
+            </div>
+
+            
+            <!-- COntent -->
+            <div class="col-md-5">
+
+              <h4>{{i.name}}</h4>
+
+              {% if i.sale_percant != 0 %}
+
+              <span class="price"><small>$</small><del>{{i.price}}</del></span> 
+              <span class="price"><small>$</small>{{i.new_price}}</span> 
+
+              
+              <div class="on-sale"> {{i.sale_percant}} <br> <span>OFF</span> </div>
+              {% else %}
+              <span class="price"><small>$</small>{{i.price}}</span> 
+
+
+
+              {% endif %}
+
+              <ul class="item-owner">
+                <li>Designer :<span> {{i.designer}}</span></li>
+              </ul>
+              
+              <!-- Item Detail -->
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus ligula a scelerisque gravida. Nullam laoreet tortor ac maximus alique met, consectetur adipiscing elit. Vestibulum finibus ligula a scelerisque gravida. Nullam</p>
+              
+              <!-- Short By -->
+              <div class="some-info">
+                <ul class="row margin-top-30">
+                  <li class="col-xs-4">
+                    <div class="quinty"> 
+                      <!-- QTY -->
+                      <select class="selectpicker" >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </select>
+                    </div>
+                  </li>
+                  
+
+                  <!-- COLORS -->
+                  
+                  
+                  <!-- ADD TO CART -->
+                  <li class="col-xs-6"> 
+                    <i data ="{{ i.id }}" class="btn add_to_basket">ADD TO CART</i>
+                  </li>
+                  
+                  {% endfor %}
+                </ul>
+                
+                <!-- INFOMATION -->
+                <div class="inner-info">
+                  <h6>DELIVERY INFORMATION</h6>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum finibus ligula a scelerisque gravida. Nullam laoreet tortor ac maximus alique met, consectetur adipiscing elit. </p>
+                  <h6>SHIPPING & RETURNS</h6>
+                  
+                  
+                  <!-- Social Icons -->
+                  <ul class="social_icons">
+                    <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+                    <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+                    <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+                    <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+                    <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            </form>
+
+        </div>
+        </div>
+        
+        <!--======= PRODUCT DESCRIPTION =========-->
+        <div class="item-decribe"> 
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs animate fadeInUp" data-wow-delay="0.4s" role="tablist">
+            <li role="presentation" class="active"><a href="#descr" role="tab" data-toggle="tab">DESCRIPTION</a></li>
+            <li role="presentation"><a href="#review" role="tab" data-toggle="tab">REVIEW</a></li>
+          </ul>
+          
+          <!-- Tab panes -->
+          <div class="tab-content animate fadeInUp" data-wow-delay="0.4s"> 
+            <!-- DESCRIPTION -->
+            <div role="tabpanel" class="tab-pane fade in active" id="descr">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sed lectus id nisi interdum mollis. Nam congue tellus quis elit mattis congue. Aenean eu massa sed mauris hendrerit ornare sed eget ante. 
+                Vestibulum id eros quam. Nunc volutpat at magna gravida eleifend. Phasellus sit amet nisi tempus, tincidunt elit ac, tempor metus. <br>
+              </p>
+              <h6>THE SIMPLE FACTS</h6>
+              <ul>
+                <li>
+                  <p>Praesent faucibus, leo vitae maximus dictum,</p>
+                </li>
+                <li>
+                  <p> Donec porta ut lectus </p>
+                </li>
+                <li>
+                  <p> Phasellus maximus velit id nisl</p>
+                </li>
+                <li>
+                  <p> Quisque a tellus et sapien aliquam sus</p>
+                </li>
+                <li>
+                  <p> Donec porta ut lectus </p>
+                </li>
+                <li>
+                  <p> Phasellus maximus velit id nisl</p>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- REVIEW -->
+            <div role="tabpanel" class="tab-pane fade" id="review">
+              <h6>REVIEWS</h6>
+              
+              
+              <!-- REVIEW PEOPLE 1 -->
+              
+              <div class="media">
+                {% for review in product.reviews.all  %}
+
+                <div class="media-left"> 
+                  <!--  Image -->
+
+                  <div class="avatar"> <a href="#"> <img class="media-object" src="{% if review.profile_img %}{{ review.profile_img.url }}{% endif %}" alt=""> </a> </div>
+                </div>
+
+                <!--  Details -->
+                <div class="media-body">
+
+                  <p class="font-playfair">{{ review.message }}</p>
+                  <h6> {{ review.name }} <span class="pull-right">{{review.created_at}}</span> </h6>
+
+                </div>
+                {% endfor %}
+
+              </div>
+              
+              
+              <!-- ADD REVIEW -->
+              <h6 class="margin-t-40">ADD REVIEW</h6>
+              <form method="POST" action="{% url 'store:product-detail' product.pk %}">
+                {% csrf_token %}
+                <ul class="row">
+                  <li class="col-sm-6">
+                    <label> 
+                      {{ form.name.label_tag }}
+                      {{ form.name }}
+                      {{ form.name.errors }}
+                    </label>
+                  </li>
+                  <li class="col-sm-6">
+                    <label>
+                      {{ form.email.label_tag }}
+                      {{ form.email }}
+                      {{ form.email.errors }}
+                    </label>
+                  </li>
+                  <li class="col-sm-12">
+                    <label> 
+                      {{ form.message.label_tag }}
+                      {{ form.message }}
+                      {{ form.message.errors }}
+                    </label>
+                  </li>
+                  <li class="col-sm-6"> 
+                    <!-- Rating Stars -->
+                    <!-- <div class="stars"> <span>YOUR RATING</span> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div> -->
+                  </li>
+                  <li class="col-sm-6">
+                    <button type="submit" class="btn btn-dark btn-small pull-right no-margin">POST REVIEW</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+            
+            <!-- TAGS -->
+            <div role="tabpanel" class="tab-pane fade" id="tags"> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Popular Products -->
+    <section class="light-gray-bg padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>YOU MAY LIKE IT</h4>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus maximus vehicula. 
+          Sed feugiat, tellus vel tristique posuere, diam</span> </div>
+        
+        <!-- Popular Item Slide -->
+        <div class="papular-block block-slide single-img-demos"> 
+          
+          <!-- Item -->
+          {% for product in posts %}
+          <div class="item"> 
+            <!-- Item img -->
+            <div class="item-img"> <img class="img-1" src="{{ product.cover_image.url }}" alt="" > 
+              <!-- Overlay -->
+              <div class="overlay">
+                <div class="position-center-center">
+                  <div class="inn"><a href="{{ product.cover_image.url }}" data-lighter><i class="icon-magnifier"></i></a> <a href="#."><i class="icon-basket"></i></a> <a href="#." ><i class="icon-heart"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <!-- Item Name -->
+            <div class="item-name"> <a href="#.">{{ product.name }}</a>
+              <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <!-- Price --> 
+            <span class="price"><small>$</small>{{ product.price }}</span> 
+          </div>
+          {% endfor %}
+          
+          <!-- Item -->
+          
+          
+          <!-- Item -->
+          
+          
+          <!-- Item -->
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section class="small-about padding-top-150 padding-bottom-150">
+      <div class="container"> 
+        
+        <!-- Main Heading -->
+        <div class="heading text-center">
+          <h4>about PAVSHOP</h4>
+          <p>Phasellus lacinia fermentum bibendum. Interdum et malesuada fames ac ante ipsumien lacus, eu posuere odio luctus non. Nulla lacinia,
+            eros vel fermentum consectetur, risus purus tempc, et iaculis odio dolor in ex. </p>
+        </div>
+        
+        <!-- Social Icons -->
+        <ul class="social_icons">
+          <li><a href="#."><i class="icon-social-facebook"></i></a></li>
+          <li><a href="#."><i class="icon-social-twitter"></i></a></li>
+          <li><a href="#."><i class="icon-social-tumblr"></i></a></li>
+          <li><a href="#."><i class="icon-social-youtube"></i></a></li>
+          <li><a href="#."><i class="icon-social-dribbble"></i></a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <!-- News Letter -->
+    
+  </div>
+  
+ 
+</div>
+{% endblock content %}
